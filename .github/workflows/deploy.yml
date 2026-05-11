@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: ["DevOps App CI"]
     types: [completed]
-    branches: [main]
+    branches: [master]
 
 jobs:
   deploy:

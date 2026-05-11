@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: ["DevOps App CI"]
     types: [completed]
-    branches: [master]
+    branches: [master] # master-dəki CI bitəndə bura baxacaq
 
 jobs:
   deploy:
@@ -19,4 +19,4 @@ jobs:
       - name: Deployment summary
         run: |
           echo "### 🚀 Deployment Update" >> $GITHUB_STEP_SUMMARY
-          echo "Render is currently building and deploying the latest version of the app." >> $GITHUB_STEP_SUMMARY
+          echo "Render is currently building and deploying from master branch." >> $GITHUB_STEP_SUMMARY
